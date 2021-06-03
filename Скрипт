@@ -1,0 +1,12 @@
+Скрипт на ProximityPrompt Лампа для начала в кнопку добовляем ProximityPrompt и вставлеям туда скрипт + Переменуйте кнопку включения света в OnLamp а лампу в Lamp002
+и в Lamp002 добовляем PointLight и настраиваем потом отключаем Enabled и пишем скрипт:
+
+function CreateOnLamp ()
+	if game.Workspace.Lamp002.PointLight.Enabled == false
+	then game.Workspace.Lamp002.PointLight.Enabled = true
+	else game.Workspace.Lamp002.PointLight.Enabled = false
+	end
+end
+
+
+game.Workspace.OnLamp.ProximityPrompt.Triggered:Connect(CreateOnLamp)
